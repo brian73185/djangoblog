@@ -4,6 +4,7 @@ from .models import Article
 from django.contrib.auth.decorators import login_required
 from . import forms
 
+# Grab all blog posts and authors
 def article_list(request):
 	articles = Article.objects.all().order_by('date')
 	return render(request, 'articles/article_list.html', { 'articles': articles })
@@ -18,14 +19,14 @@ def article_detail(request, id):
 def article_update(request, id):
     article = Article.objects.get(id=id)
     if request.method == "POST":
-        form = forms.CreateArticle(request.POST, instance=article)
+        form = forms.CreatePost(request.POST, instance=article)
         if form.is_valid():
             instance = form.save(commit=False)
             instance.author = request.user
             instance.save()
             return redirect('articles:list')
     else:
-        form = forms.CreateArticle(instance=article)
+        form = forms.CreatePost(instance=article)
     return render(request, 'articles/article_update.html', {'form': form, 'article': article})
 
 # Add new blog article
@@ -35,7 +36,7 @@ def article_create(request):
 	# Check to see if the form was submitted
 	if request.method == 'POST':
 
-		form = forms.CreateArticle(request.POST, request.FILES)
+		form = forms.CreatePost(request.POST, request.FILES)
 
 		# Check if the form is valid
 		if form.is_valid():
@@ -54,7 +55,7 @@ def article_create(request):
 	else:
 
 		# Build form from forms.py
-		form = forms.CreateArticle()
+		form = forms.CreatePost()
 
 	# Render the article creation template and pass the form to it
 	return render(request, 'articles/article_create.html', { 'form':form })
@@ -72,3 +73,6 @@ def confirm_delete(request, id):
 
 	# Return user to articles list page
 	return redirect('articles:list')
+
+def author_list(request):
+	authors = Users

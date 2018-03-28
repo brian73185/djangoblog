@@ -1,4 +1,4 @@
--e git+https://github.com/django/django.git@a4f0e9aec76ee40c938d3bf450ff63211b7ba1f1#egg=Django
+-e git+https://github.com/django/django.git#egg=Django
 Pillow==5.0.0
 psycopg2-binary==2.7.4
 pytz==2018.3
