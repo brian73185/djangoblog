@@ -1,0 +1,158 @@
+body {
+	background: #fff;
+	color: #000;
+}
+
+body * {
+	font-family: Ubuntu;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: normal;
+	margin: 0;
+}
+
+a, a:hover, a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+a#update-article {
+	color: red;
+	display: inline;
+	padding: 10px 20px;
+	position: absolute;
+	right: 65px;
+	top: 0;
+}
+
+a#delete-article {
+	color: red;
+	display: inline;
+	padding: 10px 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+div.wrapper h1 {
+	text-align: center;
+	margin: 20px auto;
+	font-size: 2.4em;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 20px 0;
+}
+
+nav {
+	justify-self: end;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+nav button {
+	background: none;
+	color: #000;
+	cursor: pointer;
+	border: 0;
+	font-size: 1em;
+}
+
+.articles {
+	display: block;
+}
+
+.article {
+	padding: 20px 10px 10px 10px;
+	border-bottom: 1px solid #000;
+}
+
+.article h2 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.article .author {
+
+}
+
+.article-detail .article {
+	padding: 0;
+	position: relative;
+}
+
+.article-detail .article img {
+	max-width: 100%;
+	margin:	0 auto;
+	text-align: center;
+	display: block;
+	padding: 20px;
+}
+
+.article-detail .article h2 {
+	text-align: center;
+	margin: 20px auto;
+	font-size: 2em;
+}
+
+.article-detail .article p {
+	text-align: left;
+	padding: 10px;
+}
+
+.site-form {
+	margin-top: 60px;
+	padding: 20px;
+}
+
+.site-form input, 
+.site-form textarea {
+	display: block;
+	margin: 5px 0 20px 0;
+	padding: 10px;
+}
+
+a.highlight {
+	padding: 10px;
+	border-radius: 4px;
+}
+
+.helptext,
+.helptext ul {
+	margin: -15px auto 20px;
+	color: #bbb;
+	font-size: 0.9em;
+	display: block;
+}
+
+.errorlist li {
+	padding: 10px;
+	list-style-type: none;
+	border: 1px solid #ff5722;
+	color: #ff5722;
+	margin: 10px 0;
+}
+
+.errorlist {
+	padding: 0;
+}
+
+.site-form input[type="submit"] {
+	background: #000;
+	border: 0;
+	color: #fff;
+	font-size: 1.2em;
+	border-radius: 4px;
+	margin: 10px 0;
+}
