@@ -43,12 +43,15 @@ a#delete-article {
 div.wrapper h1 {
 	text-align: center;
 	margin: 20px auto;
-	font-size: 2.4em;
+}
+
+header.wrapper > h1 {
+	width: 25%;
 }
 
 header {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 9fr;
 	padding: 20px 0;
 }
 
@@ -78,7 +81,7 @@ nav button {
 	border-bottom: 1px solid #000;
 }
 
-.article h3, .article h2, .article-create h2, .article-update h2, .articles h2 {
+.article h3, .article h2, .article-create h2, .article-update h2, .articles h2, .wrapper h1 {
 	font-size: 1.2em;
 	font-weight: bold;
 }
@@ -100,7 +103,7 @@ nav button {
 	padding: 20px;
 }
 
-.article-detail .article h2, .article-create h2, .article-update h2, .articles h2 {
+.article-detail .article h2, .article-create h2, .article-update h2, .articles h2, .wrapper h1 {
 	text-align: center;
 	margin: 20px auto;
 	font-size: 2em;
